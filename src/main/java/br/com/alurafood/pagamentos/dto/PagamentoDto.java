@@ -5,8 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-@AllArgsConstructor
-@NoArgsConstructor
+
 public record PagamentoDto(
         Long id,
         BigDecimal valor,
@@ -15,7 +14,7 @@ public record PagamentoDto(
         String expiracao,
         String codigo,
         Status status,
-        Long formaDePagamento,
+        Long formaDePagamentoId,
         Long pedidoId
         ) {
 }
