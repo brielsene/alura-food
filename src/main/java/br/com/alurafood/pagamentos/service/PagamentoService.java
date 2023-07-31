@@ -11,6 +11,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+
+
+
 @Service
 public class PagamentoService {
     @Autowired
@@ -36,7 +39,7 @@ public class PagamentoService {
     public PagamentoDto criarPagamento(PagamentoDto pagamentoDto){
         Pagamento pagamento = modelMapper.map(pagamentoDto, Pagamento.class);
         pagamento.setStatus(Status.CRIADO);
-        System.out.println(pagamentoDto.formaDePagamentoId());
+
         pagamentoRepository.save(pagamento);
         return modelMapper.map(pagamento, PagamentoDto.class);
     }

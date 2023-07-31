@@ -1,5 +1,6 @@
 package br.com.alurafood.pagamentos.model;
 
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 import java.math.BigDecimal;
 
@@ -46,9 +48,11 @@ public class Pagamento {
     private Status status;
 
     //    @NotNull
+    @Column(name = "forma_de_pagamento_id")
     private Long formaDePagamentoId;
 
 //    @NotNull
+    @Column(name = "pedido_id")
     private Long pedidoId;
 
 
